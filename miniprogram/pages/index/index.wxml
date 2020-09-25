@@ -59,7 +59,7 @@
     <view style="margin-top: 30rpx;">
         <swiper bindchange="cardSwiper" class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" circular="true" autoplay="true" interval="5000" duration="500">
            <swiper-item>
-                <navigator url="../post/post?postId={{bannerPost.id}}" open-type="navigate">
+                <navigator url="../prescription-detail" open-type="navigate">
                     <view class="swiper-item" style="padding: 20rpx; padding-bottom:26rpx;">
                         <view class="carousel-img radius shadow-meow bg-lightGrey bg-img" style="background-image:url(https://www.foxitsoftware.com/blog/wp-content/uploads/2016/12/Is-CCD-the-patient-data-exchange-standard-to-rule-them-all-in-healthcare.png); width:100%">
                             <view class="bg-maskCard flex-sub" style="border-radius:6rpx; height:100%; position:relative;">
@@ -79,7 +79,7 @@
                 </navigator>
             </swiper-item>
             <swiper-item>
-                <navigator url="../post/post?postId={{bannerPost.id}}" open-type="navigate">
+                <navigator url="../prescription-detail" open-type="navigate">
                     <view class="swiper-item" style="padding: 20rpx; padding-bottom:26rpx;">
                         <view class="carousel-img radius shadow-meow bg-lightGrey bg-img" style="background-image:url(https://www.foxitsoftware.com/blog/wp-content/uploads/2016/12/Is-CCD-the-patient-data-exchange-standard-to-rule-them-all-in-healthcare.png); width:100%">
                             <view class="bg-maskCard flex-sub" style="border-radius:6rpx; height:100%; position:relative;">
@@ -99,7 +99,7 @@
                 </navigator>
             </swiper-item>
             <swiper-item>
-                <navigator url="../post/post?postId={{bannerPost.id}}" open-type="navigate">
+                <navigator url="../prescription-detail" open-type="navigate">
                     <view class="swiper-item" style="padding: 20rpx; padding-bottom:26rpx;">
                         <view class="carousel-img radius shadow-meow bg-lightGrey bg-img" style="background-image:url(https://www.foxitsoftware.com/blog/wp-content/uploads/2016/12/Is-CCD-the-patient-data-exchange-standard-to-rule-them-all-in-healthcare.png); width:100%">
                             <view class="bg-maskCard flex-sub" style="border-radius:6rpx; height:100%; position:relative;">
