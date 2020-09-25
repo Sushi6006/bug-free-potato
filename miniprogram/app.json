@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/prescription-detail"
     "pages/index/index",
     "pages/logs/logs"
   ],
