@@ -1,0 +1,175 @@
+<!--index.wxml-->
+
+<scroll-view scroll-y class="DrawerPage {{modalName=='viewModal'?'show':''}}" bindscroll="onPageScroll" scroll-with-animation="true" style="background-color: {{skin?'#ffffff':'#ffffff'}};" bindscrolltolower="loadMore">
+    <cu-custom bgColor="bg-lightGrey" isBack="{{false}}" isCustom="{{false}}" isNav="{{scrollTop>120?false:true}}" isFixed="fixed">
+        <view slot="content" class="text-shadow-meows">
+            <text class="text-white text-bold">{{BlogName}}</text>
+        </view>
+    </cu-custom>
+    <wh-addTips text="Meow~ 点击「添加到我的小程序」" duration="2"></wh-addTips>
+    <view bindtouchstart="touchStart" bindtouchend="touchEnd" class="flex justify-center align-center bg-white" style="width:100%; height:460rpx; background-image:url(http://img1.juimg.com/170727/330862-1FHH2321982.jpg); background-repeat: no-repeat; background-size: 100% 100%;">
+        <view class="grid col-1 margin-bottom text-center">
+            <view class="text-xxxl padding text-shadow-meow" role="" aria-label="">
+              
+                <text class="text-white text-bold">{{BlogName}}</text>
+            </view>
+            
+            <view class="text-xl padding text-shadow-meow text-white text-bold" role="" aria-label="">
+                <wh-typeWriter whContent="{{jinrishici}}"></wh-typeWriter>
+            </view>
+        </view>
+        <view class="cu-item" style='min-height: 200rpx;'>
+            <view wx:if="{{!hasUserInfo && canIUse}}" class="content grid col-1">
+                    <!--<view class="padding-sm text-sm flex justify-center">
+                        <text class="text-grey">Login for more features</text>
+                    </view>-->
+                    <view style="margin-top: 70rpx; margin-left:-60rpx">
+                        <view class="grid col-1 margin-bottom text-center">
+                            <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'>
+                            WeChat authorization
+                            </button>
+                        </view>
+                    </view>
+                </view>
+                <!--
+                <block wx:else>
+                    <view class="content flex justify-center align-center">
+                        <view class="flex-sub">
+                            <view class="cu-avatar xl round menu-img" style="background-image:url({{userInfo.avatarUrl}});"></view>
+                        </view>
+                        <view class="flex-twice grid col-1 ">
+                            <view class="text-lg margin-xs">
+                                <text class="text-black text-bold">{{userInfo.nickName}}</text>
+                            </view>
+                            <view class="margin-xs bg-white">
+                                <view class="cu-tag radius">{{Role}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+                -->
+            </view>
+    </view>
+    <view class="home text-shadow-meow" bindtap="showModal" data-target="viewModal">
+        <view class="home-btn home-img shadow-blur"></view>
+    </view>
+    <!-- catch:touchstart="maopao" catch:touchend="maopao" -->
+    
+     
+    <view style="margin-top: 30rpx;">
+        <swiper bindchange="cardSwiper" class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" circular="true" autoplay="true" interval="5000" duration="500">
+           <swiper-item>
+                <navigator url="../post/post?postId={{bannerPost.id}}" open-type="navigate">
+                    <view class="swiper-item" style="padding: 20rpx; padding-bottom:26rpx;">
+                        <view class="carousel-img radius shadow-meow bg-lightGrey bg-img" style="background-image:url(https://www.foxitsoftware.com/blog/wp-content/uploads/2016/12/Is-CCD-the-patient-data-exchange-standard-to-rule-them-all-in-healthcare.png); width:100%">
+                            <view class="bg-maskCard flex-sub" style="border-radius:6rpx; height:100%; position:relative;">
+                                <view class="padding-lg text-white">
+                                    <view class="padding-xs text-xl text-bold text-shadow">
+                                       title
+                                    </view>
+                                </view>
+                                <view class="padding-lg text-white" style="position:absolute; bottom:0; right:0;">
+                                    <view class="padding-xs text-df text-bold text-shadow">
+                                        2020.9.26
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </navigator>
+            </swiper-item>
+            <swiper-item>
+                <navigator url="../post/post?postId={{bannerPost.id}}" open-type="navigate">
+                    <view class="swiper-item" style="padding: 20rpx; padding-bottom:26rpx;">
+                        <view class="carousel-img radius shadow-meow bg-lightGrey bg-img" style="background-image:url(https://www.foxitsoftware.com/blog/wp-content/uploads/2016/12/Is-CCD-the-patient-data-exchange-standard-to-rule-them-all-in-healthcare.png); width:100%">
+                            <view class="bg-maskCard flex-sub" style="border-radius:6rpx; height:100%; position:relative;">
+                                <view class="padding-lg text-white">
+                                    <view class="padding-xs text-xl text-bold text-shadow">
+                                       title2
+                                    </view>
+                                </view>
+                                <view class="padding-lg text-white" style="position:absolute; bottom:0; right:0;">
+                                    <view class="padding-xs text-df text-bold text-shadow">
+                                        2020.9.20
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </navigator>
+            </swiper-item>
+            <swiper-item>
+                <navigator url="../post/post?postId={{bannerPost.id}}" open-type="navigate">
+                    <view class="swiper-item" style="padding: 20rpx; padding-bottom:26rpx;">
+                        <view class="carousel-img radius shadow-meow bg-lightGrey bg-img" style="background-image:url(https://www.foxitsoftware.com/blog/wp-content/uploads/2016/12/Is-CCD-the-patient-data-exchange-standard-to-rule-them-all-in-healthcare.png); width:100%">
+                            <view class="bg-maskCard flex-sub" style="border-radius:6rpx; height:100%; position:relative;">
+                                <view class="padding-lg text-white">
+                                    <view class="padding-xs text-xl text-bold text-shadow">
+                                       title3
+                                    </view>
+                                </view>
+                                <view class="padding-lg text-white" style="position:absolute; bottom:0; right:0;">
+                                    <view class="padding-xs text-df text-bold text-shadow">
+                                        2020.8.26
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </navigator>
+            </swiper-item>
+       </swiper>
+    </view>
+    <view style="margin-right:20rpx; margin-left:20rpx;">
+        <official-account style=""></official-account>
+    </view>
+    
+    
+   <!--
+    <scroll-view scroll-x class="bg-white nav text-center" style="background-color: {{skin?'#ffffff':'#ffffff'}};">
+        <view class="cu-item {{index==TabCur?'text-blue text-shadow text-xl':''}}  text-bold text-lg" wx:for="{{pages>6?pages:6}}" wx:key="keyId" wx:for-index="index" bindtap="tabSelect" data-id="{{index}}" style="line-height:60rpx;">
+     -->       <!-- {{index}} -->
+        <!--    {{index==0?'W':''}} {{index==1?'e':''}} {{index==2?'H':''}} {{index==3?'a':''}} {{index==4?'l':''}} {{index!=0 & index!=1 & index!=2 & index!=3 & index!=4 ?'o':''}}
+        </view>
+    </scroll-view>
+    -->
+
+    <!-- 瀑布流 -->
+    <!-- <view class="grid col-2 content text-center" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{0==TabCur}}"> -->
+    <view class="grid col-2 content text-center" bindtouchstart="touchStart" bindtouchend="touchEnd">
+        <view class="fall-left">
+            <block wx:for="{{postList}}" wx:key="keyId" wx:for-index="index" wx:for-item="postList" wx:if="{{index%2==0}}">
+                <navigator url="../post/post?postId={{postList.id}}" open-type="navigate" data-id="{{index}}">
+                    <view class="margin-sm radius shadow-blur bg-img {{colourList[(index+randomNum)%10].colour}} animation-scale-up" style="margin-right:10rpx; margin-top:0; background-image:url({{skin?postList.thumbnail:''}}); animation-delay: {{(index+1)*0.2*animationTime}}s;">
+                        <view class="bg-maskCards flex-sub align-end" style="border-radius:6rpx; height:100%;">
+                            <view class="padding-lg text-white">
+                                <view class="padding-xs text-xl text-bold text-shadow">
+                                    {{postList.title}}
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </navigator>
+            </block>
+        </view>
+        <view class="fall-right">
+            <block wx:for="{{postList}}" wx:key="keyId" wx:for-index="index" wx:for-item="postList" wx:if="{{index%2==1}}">
+                <navigator url="../post/post?postId={{postList.id}}" open-type="navigate" data-id="{{index}}">
+                    <view class="margin-sm radius shadow-blur bg-img {{colourList[(index+randomNum)%10].colour}} animation-scale-up" style="margin-left:10rpx; margin-top:0; background-image:url({{skin?postList.thumbnail:''}}); animation-delay: {{(index+1)*0.2*animationTime}}s;">
+                        <view class="bg-maskCards flex-sub align-end" style="border-radius:6rpx; height:100%;">
+                            <view class="padding-lg text-white">
+                                <view class="padding-xs text-xl text-bold text-shadow">
+                                    {{postList.title}}
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </navigator>
+            </block>
+        </view>
+        
+    </view>
+    
+    
+
+</scroll-view>
