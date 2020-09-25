@@ -14,7 +14,10 @@ App({
         traceUser: true,
       })
     }
-
+    
+    wx.switchTab({
+      url: 'pages/index/index'
+    })
     this.globalData = {}
   }
 })

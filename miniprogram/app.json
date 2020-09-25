@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/userinfo/userinfo"
-  ],
+    ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
@@ -28,7 +28,7 @@
           "iconPath": "images/my-off.png",
           "selectedIconPath": "images/my-on.png",
           "text": "Account"
-        }
+        } 
       ]
     },
   "sitemapLocation": "sitemap.json",

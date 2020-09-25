@@ -10,7 +10,7 @@
     </view>
     <image class="exchange-image" src="../../images/diaozhuan@2x.png"></image>
   </view> -->
-
+ 
 
   <view class="user-box">
   <view class="user-info-box">
@@ -26,6 +26,7 @@
     <view class="bus-actual-info-time">沪A-01302D还有10分钟到站</view>
     <view class="bus-actual-info-stops">5站</view>
   </view> -->
+  
 
   <view class="prescription-info">
     <view class="prescription-prefix">Number of prescriptions waiting to be processed:</view>
