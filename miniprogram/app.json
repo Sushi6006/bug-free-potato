@@ -10,6 +10,26 @@
     "navigationBarTitleText": "云开发 QuickStart",
     "navigationBarTextStyle": "black"
   },
+  "tabBar": {
+      "color": "#6e6d6b",
+      "selectedColor": "#e64340",
+      "borderStyle": "white",
+      "backgroundColor": "#fff",
+      "list": [
+        {
+          "pagePath": "pages/index/index", 
+          "iconPath": "images/home-off.png",
+          "selectedIconPath": "images/home-on.png",
+          "text": "Homepage"
+        },
+        {
+          "pagePath": "pages/index/index",
+          "iconPath": "images/my-off.png",
+          "selectedIconPath": "images/my-on.png",
+          "text": "Account"
+        }
+      ]
+    },
   "sitemapLocation": "sitemap.json",
   "style": "v2"
 }
