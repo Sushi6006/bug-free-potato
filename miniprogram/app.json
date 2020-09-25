@@ -2,8 +2,9 @@
   "pages": [
     "pages/prescription-detail"
     "pages/index/index",
-    "pages/logs/logs"
-  ],
+    "pages/logs/logs",
+    "pages/userinfo/userinfo"
+    ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
@@ -24,11 +25,11 @@
           "text": "Homepage"
         },
         {
-          "pagePath": "pages/index/index",
+          "pagePath": "pages/userinfo/userinfo",
           "iconPath": "images/my-off.png",
           "selectedIconPath": "images/my-on.png",
           "text": "Account"
-        }
+        } 
       ]
     },
   "sitemapLocation": "sitemap.json",
