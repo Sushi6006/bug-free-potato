@@ -30,21 +30,20 @@ Page({
               that.setData({
                 userInfo:res.userInfo,
                 showAuth:false
-              })
+              });
             }
           })
         }
       }
     });
-    
   },
   changeLanguage:function(){
+    var that=this;
     var app = getApp();
     var target = ((app.globalData.language=="en")?"zh":"en");
     app.globalData.language= target
-    this.setData({
+    that.setData({
       en:(app.globalData.language=="en")
-    })
+    });
   }
-
 })
