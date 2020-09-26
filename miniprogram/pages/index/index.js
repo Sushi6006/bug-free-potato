@@ -94,4 +94,5 @@ touchEnd: function (e) {
   clearInterval(interval); // 清除setInterval
   time = 0;
 }
-})
+}) 
+ 
