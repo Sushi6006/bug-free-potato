@@ -8,18 +8,21 @@ Page({
       en:true
   },
 
-    auth:function(e){
-        this.setData({
-        userInfo:e.detail.userInfo,
-        showAuth:false
-        });
-    },
+  auth:function(e){
+    this.setData({
+      userInfo:e.detail.userInfo,
+      showAuth:false
+    });
+    var app=getApp();
+    app.globalData.showAuth=false;
+  },
 
   onLoad:function(){
     var that=this;
     var appInstance = getApp();
     that.setData({
-      en:(appInstance.globalData.language=="en")
+      en:(appInstance.globalData.language=="en"),
+      showAuth:(appInstance.globalData.showAuth)
     })
     wx.getSetting({
       success(res){

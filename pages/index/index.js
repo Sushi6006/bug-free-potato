@@ -11,14 +11,22 @@ Page({
       userInfo:e.detail.userInfo,
       showAuth:false
     });
+    var app=getApp();
+    app.globalData.showAuth=false;
   },
 
   onLoad:function(){
     var that=this;
+    var appInstance = getApp();
+    that.setData({
+      en:(appInstance.globalData.language=="en"),
+      showAuth:(appInstance.globalData.showAuth)
+    })
     wx.getSetting({
       success(res){
         if(res.authSetting["scope.userInfo"]){
           wx.getUserInfo({
+            lang:that.data.en?"en":"zh_CN",
             success: function(res) {
               that.setData({
                 userInfo:res.userInfo,
@@ -29,10 +37,7 @@ Page({
         }
       }
     });
-    var appInstance = getApp();
-    that.setData({
-      en:(appInstance.globalData.language=="en")
-    })
+    
   },
 
   changeLanguage:function(){

@@ -35,6 +35,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    language:"en"
+    language:"en",
+    showAuth:true
   }
 })
