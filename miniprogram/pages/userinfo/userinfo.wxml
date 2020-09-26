@@ -1,32 +1,11 @@
-<!--pages/bus/bus.wxml-->
-<!-- <view class="bus-box">
-  <view class="bus-info-box">
-    <view class="bus-info-stop-box">
-      <view class="stop-name-text">Kk</view>
-      <view class="stop-time-box">
-        <view class="stop-time-first-text">首：04:15</view>
-        <view class="stop-time-last-text">末：19:30</view>
-      </view>
-    </view>
-    <image class="exchange-image" src="../../images/diaozhuan@2x.png"></image>
-  </view> -->
- 
 
-  <view class="user-box">
+<view class="user-box">
   <view class="user-info-box">
     <view class="user-info-header-box">
       <view class="user-name-text">Kk</view>
       <view class="user-id-box">UserID: 954153</view>
     </view>
-    <!-- <image class="exchange-image" src="../../images/diaozhuan@2x.png"></image> -->
   </view>
-
-
-  <!-- <view class="bus-actual-info">
-    <view class="bus-actual-info-time">沪A-01302D还有10分钟到站</view>
-    <view class="bus-actual-info-stops">5站</view>
-  </view> -->
-  
 
   <view class="prescription-info">
     <view class="prescription-prefix">Number of prescriptions waiting to be processed:</view>
@@ -34,13 +13,11 @@
   </view>
 
   
-  <view class="user-list-item" wx:for="{{userInfo}}">
-    <!-- <image class="user-item-image" src="../../images/zhou@2x.png"></image> -->
+  <view class="user-list-item" wx:for="{{userInfo}}" wx:key="*this">
     <view class="user-item-name">{{item.infoName}}{{item.infoValue}}</view>
-    <!-- <image class="user-item-favor-image" src="../../images/shoucang@2x.png"></image> -->
   </view>
 </view>
 
 <button class="btn1"> 
   <view class="btn1-text"> Purchase History </view>
-  </button>
+</button>

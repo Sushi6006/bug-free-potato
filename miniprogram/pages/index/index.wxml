@@ -22,7 +22,7 @@
             <view wx:if="{{!hasUserInfo && canIUse}}" class="content grid col-1">
                     <!--<view class="padding-sm text-sm flex justify-center">
                         <text class="text-grey">Login for more features</text>
-                    </view>-->
+                    </view>--> 
                     <view style="margin-top: 70rpx; margin-left:-60rpx">
                         <view class="grid col-1 margin-bottom text-center">
                             <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'>
