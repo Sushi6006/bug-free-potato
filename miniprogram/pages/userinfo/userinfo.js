@@ -7,6 +7,7 @@ Page({
       userInfo: {},
       hasUserInfo: false,
       canIUse: wx.canIUse('button.open-type.getUserInfo'),
+
       fakeuserInfo: [{'id': 0, 'sid': null, "infoName": "Sex:  ", "infoValue": "Male"},
       {'id': 0, 'sid': null, "infoName": "DOA:  ", "infoValue": "2000-09-21"},
       {'id': 0, 'sid': null, "infoName": "Address:  ", "infoValue": "xxx"}]
@@ -46,6 +47,7 @@ Page({
       url: "/pages/orders/orders?type=" + e.currentTarget.dataset.type
     })
   },
+
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -56,4 +58,6 @@ Page({
   },
   
   })
+  
+
   

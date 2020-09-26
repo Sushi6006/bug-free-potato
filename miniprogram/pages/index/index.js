@@ -13,7 +13,6 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
-  
   onShow: function () {
     if (app.globalData.userInfo) {
       this.setData({

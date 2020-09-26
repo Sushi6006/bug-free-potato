@@ -1,4 +1,5 @@
 <view wx:if="{{!hasUserInfo && canIUse}}" class="content grid col-1">
+
   <view style="margin-top: 300rpx">
     <view class="padding-sm text-sm flex justify-center">
       <text class="text-grey">Prescriptor</text>
@@ -70,6 +71,7 @@
       <view class="user-info-header-box">
       <!-- <view class="user-name-text">{{userInfo.nickName}}</view>--> 
 
+
         <view class="user-id-box">UserID: 954153</view>
       </view>
       <!-- <image class="exchange-image" src="../../images/diaozhuan@2x.png"></image> -->
@@ -81,6 +83,7 @@
       <view class="prescription-number">6</view>
     </view>
 
+
     
 
     <view class="user-list-item" wx:for="{{fakeuserInfo}}" wx:key="*this">
@@ -88,6 +91,5 @@
       <!-- <image class="user-item-favor-image" src="../../images/shoucang@2x.png"></image> -->
     </view>
   </view>
-
 </view>
 </block>

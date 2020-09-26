@@ -5,6 +5,7 @@
     "pages/orders/orders",  
     "pages/history/history",
     "pages/prescription/prescription-detail"
+
     ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -13,7 +14,7 @@
     "navigationBarTitleText": "云开发 QuickStart",
     "navigationBarTextStyle": "black"
   },
-  "tabBar": {
+  "tabBar": { 
       "color": "#6e6d6b",
       "selectedColor": "#e64340",
       "borderStyle": "white",

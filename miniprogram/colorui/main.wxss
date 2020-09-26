@@ -4070,4 +4070,4 @@ scroll-view.cu-steps .cu-item {
     background-size: contain;
     /* background-image:url(../image/cat.png); */
     background-image:url(http://img1.juimg.com/170727/330862-1FHH2321982.jpg);
-}
+} 
