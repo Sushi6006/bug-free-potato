@@ -4,7 +4,8 @@
     "pages/account/account",
     "pages/prescription/prescription",
     "pages/orders/orders",
-    "pages/history/history"
+    "pages/history/history",
+    "pages/consultation/consultation"
   ],
   "window":{
     "backgroundTextStyle":"light",

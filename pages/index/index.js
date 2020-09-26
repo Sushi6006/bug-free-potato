@@ -42,5 +42,11 @@ Page({
     this.setData({
       en:(app.globalData.language=="en")
     })
+  },
+
+  gotoConsultation:function(){
+    wx.navigateTo({
+      url: '/pages/consultation/consultation',
+    })
   }
 })

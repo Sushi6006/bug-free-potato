@@ -24,8 +24,7 @@
         <text>{{en?"Prescription 3":"药方3"}}</text>
       </view></navigator></swiper-item>
     </swiper>
-    <button>{{en?"Consultation Request":"预约"}}</button>
-    <button>{{en?"Order Medicine":"订购药品"}}</button>
+    <button bindtap="gotoConsultation">{{en?"Consultation Request":"预约"}}</button>
   </block>
 </view>
 

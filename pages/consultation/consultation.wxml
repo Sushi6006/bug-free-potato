@@ -1,0 +1,16 @@
+<!--pages/consultation/consultation.wxml-->
+<view class="container">
+  <text class="h1">Consultation Request</text>
+  <view class="formGroup">
+   <text>Name:</text>
+   <input auto-focus placeholder="Name" maxlength="10"></input>
+  </view>
+  <view class="formGroup">
+   <text>Request Content:</text>
+   <textarea auto-focus placeholder="Please enter your request"></textarea>
+  </view>
+  <view class="btn-area">
+    <button style="margin: 30rpx 0" type="primary" formType="submit" bindtap="onSubmit">Submit</button>
+    <button style="margin: 30rpx 0" formType="reset">Reset</button>
+  </view>
+</view>

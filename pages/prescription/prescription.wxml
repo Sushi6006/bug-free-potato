@@ -36,8 +36,9 @@
         <view slot="footer">Prescribed by Dr. Ab Cde on 24th Oct. 2018</view>
     </view>
 
-    <view style="margin-top: 30rpx;margin-left: 50rpx;margin-right: 50rpx" >
-    <image src="/images/QRCODE.png"></image>
+    <view style="padding:0 30rpx" >
+    <image src="/images/QRCODE.png" mode="aspectFit"></image>
     </view>
     <view style="margin: 20px" />
+    <button style="margin-top:0rpx" bindtap="navBack">Order</button>
 </view>

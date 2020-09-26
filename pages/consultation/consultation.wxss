@@ -1,0 +1,24 @@
+/* pages/consultation/consultation.wxss */
+.formGroup{
+  width:750rpx;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  padding-left: 30rpx;
+  margin-top: 30rpx;
+}
+
+.formGroup input{
+  width: 500rpx;
+  background-color: rgba(17, 1, 1, 0.199);
+}
+
+.formGroup text{
+  width: 150rpx;
+}
+
+.formGroup textarea{
+  background-color: rgba(17, 1, 1, 0.199);
+  width: 500rpx;
+}
