@@ -1,0 +1,30 @@
+<!--pages/authorization/authorization.wxml-->
+<view class="container">
+  <block wx:if="{{showAuth}}">
+    <text class="h1">Prescriptor</text>
+    <text class="p">Manage your prescriptions and purchase medicine at home</text>
+    <button class="authBtn" open-type="getUserInfo" bindgetuserinfo="auth">授权登录</button>
+  </block>
+
+  <block wx:else>
+    <view class="header">
+      <image class="avatar" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+      <text class="name">Welcome, {{userInfo.nickName}}</text>
+    </view>
+    <text class="p">Prescriptions</text>
+    <swiper class="prescriptions" indicator-dots circular previous-margin="10px" next-margin="10px">
+      <swiper-item><navigator url="/pages/prescription/prescription"><view class="bgCard">
+        <text>prescription 1</text>
+      </view></navigator></swiper-item>
+      <swiper-item><navigator url="/pages/prescription/prescription"><view class="bgCard">
+        <text>prescription 2</text>
+      </view></navigator></swiper-item>
+      <swiper-item><navigator url="/pages/prescription/prescription"><view class="bgCard">
+        <text>prescription 3</text>
+      </view></navigator></swiper-item>
+    </swiper>
+    <button>prescription request</button>
+  </block>
+</view>
+
+

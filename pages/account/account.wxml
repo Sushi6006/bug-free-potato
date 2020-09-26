@@ -1,0 +1,23 @@
+
+<view class="user-box">
+  <view class="user-info-box">
+    <view class="user-info-header-box">
+      <view class="user-name-text">Kk</view>
+      <view class="user-id-box">UserID: 954153</view>
+    </view>
+  </view>
+
+  <view class="prescription-info">
+    <view class="prescription-prefix">Number of prescriptions waiting to be processed:</view>
+    <view class="prescription-number">3</view>
+  </view>
+
+  
+  <view class="user-list-item" wx:for="{{userInfo}}" wx:key="*this">
+    <view class="user-item-name">{{item.infoName}}{{item.infoValue}}</view>
+  </view>
+</view>
+
+<button class="btn1"> 
+  <view class="btn1-text"> Purchase History </view>
+</button>

@@ -1,0 +1,39 @@
+<!--pages/prescription/prescription.wxml-->
+<view class="i-card">
+    <!-- card header -->
+    <view style="margin: 8px" />
+    <view class="i-card-header">
+        <!-- <view class="i-card-header-title">Prescription 12</view> -->
+        <view class="i-card-header-content">Prescription 12</view>
+        <view class="i-card-header-extra">Expires in 2 days</view>
+    </view>
+    <view style="margin: 8px" />
+    
+    <!-- card body - information -->
+    <view class="i-card-body">
+        <view style="margin: 4px" />
+        <view slot="content">Prescriber's Information</view>
+        <view style="margin: 4px" />
+    </view>
+    <view class="i-card-body">
+        <view style="margin: 4px" />
+        <view slot="content">Patient's Information</view>
+        <view style="margin: 4px" />
+    </view>
+
+    <!-- card body - prescription -->
+    <view class="i-card-body">
+        <view style="margin: 8px" />
+        <view slot="content">Medicine 1</view>
+        <view slot="content">Medicine 2</view>
+        <view slot="content">Medicine 3</view>
+        <view slot="content">Medicine 4</view>
+        <view slot="content">Medicine 5</view>
+    </view>
+    
+    <!-- card footer -->
+    <view class="i-class i-card-footer">
+        <view slot="footer">Prescribed by Dr. Ab Cde on 24th Oct. 2018</view>
+    </view>
+
+</view>

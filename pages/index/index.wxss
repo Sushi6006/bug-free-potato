@@ -1,0 +1,89 @@
+/* pages/authorization/authorization.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  height:100vh;
+  width: 750rpx;
+  background-image: url("https://i.pinimg.com/736x/de/a5/55/dea5551a58c21c1c87c711f01520daac.jpg");
+  background-size: 100% 100%;
+  -moz-background-size:100% 100%;
+}
+
+swiper-item navigator{
+  width: 100%;
+  height: 100%;
+}
+
+.h1{
+  margin-top: 200rpx;
+  font-size: x-large;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p{
+  margin-top: 50rpx;
+}
+
+.prescriptions{
+  display: flex;
+  height:300rpx;
+  width: 750rpx;
+  margin-top: 20rpx;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  height:300rpx;
+  width: 750rpx;
+  background-image: url("https://media.istockphoto.com/videos/health-care-icon-pattern-medical-innovation-concept-background-video-id1139247059?s=640x640");
+}
+.avatar{
+  border-radius: 50%;
+  width: 200rpx;
+  height:200rpx;
+  margin-top: 30rpx;
+}
+.authBtn{
+  top:40%;
+  background-color: rgb(120, 238, 120);
+}
+
+.btnPrimary{
+  background-color: #3498db;
+  padding:10rpx;
+  border-radius: 10%;
+  margin-top: 20rpx;
+}
+.topRight{
+  max-width: 200rpx;
+  max-height: 200rpx;
+  top:0;
+  right:0;
+}
+.cover{
+  background-image: url("http://img1.juimg.com/170727/330862-1FHH2321982.jpg");
+}
+
+.bgCard{
+  background-image: url("https://www.foxitsoftware.com/blog/wp-content/uploads/2016/12/Is-CCD-the-patient-data-exchange-standard-to-rule-them-all-in-healthcare.png");
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  border-radius: 10%;
+}
+
+swiper-item{
+  padding:0 10rpx;
+  box-sizing: border-box;
+}
+
+button{
+  margin-top: 10rpx;
+}
