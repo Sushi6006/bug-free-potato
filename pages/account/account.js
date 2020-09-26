@@ -2,10 +2,11 @@
 // pages/bus/bus.js
 Page({
 
-data: {
-    userInfo:{},
-    showAuth:true,
-},
+  data: {
+      userInfo:{},
+      showAuth:true,
+      en:true
+  },
 
     auth:function(e){
         this.setData({
@@ -16,10 +17,15 @@ data: {
 
   onLoad:function(){
     var that=this;
+    var appInstance = getApp();
+    that.setData({
+      en:(appInstance.globalData.language=="en")
+    })
     wx.getSetting({
       success(res){
         if(res.authSetting["scope.userInfo"]){
           wx.getUserInfo({
+            lang:that.data.en?"en":"zh_CN",
             success: function(res) {
               that.setData({
                 userInfo:res.userInfo,
@@ -29,6 +35,15 @@ data: {
           })
         }
       }
+    });
+    
+  },
+  changeLanguage:function(){
+    var app = getApp();
+    var target = ((app.globalData.language=="en")?"zh":"en");
+    app.globalData.language= target
+    this.setData({
+      en:(app.globalData.language=="en")
     })
   }
 

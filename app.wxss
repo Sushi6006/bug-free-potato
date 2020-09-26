@@ -17,6 +17,16 @@ button{
   background-color: turquoise;
 }
 
+.languageBtn{
+  position: absolute;
+  top:0;
+  left:0;
+  margin-top: 0;
+  height: 70rpx;
+  font-size: small;
+  background-color: whitesmoke;
+}
+
 .h1{
   margin-top: 200rpx;
   font-size: x-large;

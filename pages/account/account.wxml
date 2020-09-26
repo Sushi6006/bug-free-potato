@@ -1,62 +1,62 @@
 
 <view class="container">
+  <button class="languageBtn" style="width:200rpx" bindtap="changeLanguage">{{en?"切换中文":"English"}}</button>
   <block wx:if="{{showAuth}}">
-    <text class="h1">Prescriptor</text>
-    <text class="p">Manage your prescriptions and purchase medicine at home</text>
-    <button class="authBtn" open-type="getUserInfo" bindgetuserinfo="auth">WeChat Authorization</button>
+    <text class="h1">{{en?"Prescriptor":"药方管家"}}</text>
+    <text class="p">{{en?"Manage your prescriptions and purchase medicine at home":"管理你的药方，轻松订购"}}</text>
+    <button class="authBtn" open-type="getUserInfo" bindgetuserinfo="auth">{{en?"WeChat Authorization":"授权登录"}}</button>
   </block>
   <block wx:else>
-
     <view class="user-box"  style="text-align:left">
       <view class="header">
         <image class="avatar" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
-        <text class="name">Welcome, {{userInfo.nickName}}</text>
+        <text class="name">{{en?"Welcome, ":"欢迎回来，"}}  {{userInfo.nickName}}</text>
       </view>
 
       <view class="order-div">
         <navigator class="myorder" url="/pages/orders/orders?nav_status=9999">
-          <text>My Orders</text>
+          <text>{{en?"My Orders":"我的订单"}}</text>
           <image src="/images/next.png" mode="widthFix"></image>
         </navigator>
         <view class="navbars">
           <navigator class="nav-item" url="/pages/orders/orders?nav_status=0">
             <image src="/images/topay.png" mode="widthFix"></image>
-            <text>Unpaid</text>
+            <text>{{en?"Unpaid":"未付款"}}</text>
             <view class="dot"></view>
           </navigator>
           <navigator class="nav-item" url="/pages/orders/orders?nav_status=1">
             <image src="/images/fahuo.png" mode="widthFix"></image>
-            <text>Confirmed</text>
+            <text>{{en?"Confirmed":"已确认"}}</text>
           </navigator>
           <navigator class="nav-item" url="/pages/orders/orders?nav_status=2">
             <image src="/images/delivered.png" mode="widthFix"></image>
-            <text>OnItsWay</text>
+            <text>{{en?"OnItsWay":"寄送中"}}</text>
           </navigator>
           <navigator class="nav-item" url="/pages/orders/orders?nav_status=3">
             <image src="/images/shouhou.png" mode="widthFix"></image>
-            <text>Delivered</text>
+            <text>{{en?"Delivered":"已送达"}}</text>
           </navigator>
         </view>
       </view>
 
       <view class="prescription-info">
-        <view class="prescription-prefix">Number of prescriptions waiting to be processed:</view>
+        <view class="prescription-prefix">{{en?"Number of prescriptions waiting to be processed":"待处理的药方"}}:</view>
         <view class="prescription-number">3</view>
       </view>
       <view class="user-list-item">
-        <view class="user-item-name">Gender: {{userInfo.gender==1?"Male":"Female"}} </view>
+        <view class="user-item-name">{{en?"Gender":"性别"}}: {{(userInfo.gender==1)?(en?"Male":"男"):(en?"Female":"女")}} </view>
       </view>
       <view class="user-list-item">
-        <view class="user-item-name">Country: {{userInfo.country}} </view>
+        <view class="user-item-name">{{en?"Country":"国家"}}: {{userInfo.country}} </view>
       </view>
       <view class="user-list-item">
-        <view class="user-item-name">Province: {{userInfo.province}} </view>
+        <view class="user-item-name">{{en?"Province":"省"}}: {{userInfo.province}} </view>
       </view>
       <view class="user-list-item">
-        <view class="user-item-name">City: {{userInfo.city}} </view>
+        <view class="user-item-name">{{en?"City":"市"}}: {{userInfo.city}} </view>
       </view>
       <view class="user-list-item">
-        <view class="user-item-name">Language: {{userInfo.language=="zh_CN"?"Chinese":"English"}} </view>
+        <view class="user-item-name">{{en?"Language":"语言"}}: {{(userInfo.language=="zh_CN")?"中文":"English"}} </view>
       </view>
     </view>
   </block>

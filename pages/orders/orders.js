@@ -23,7 +23,8 @@ Page({
       },
     ],
     status: 9999,
-    badges: [0, 0, 0, 0, 0]
+    badges: [0, 0, 0, 0, 0],
+    en:true
   },
   statusTap: function(e) {
     const status = e.currentTarget.dataset.status;
@@ -33,6 +34,10 @@ Page({
     this.onShow();
   },
   onLoad: function(options) {
+    var app = getApp();
+    this.setData({
+      en:(app.globalData.language=="en")
+    })
     if (options && options.nav_status) {
       if (options.type == 99) {
         this.setData({

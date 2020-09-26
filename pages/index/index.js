@@ -3,7 +3,7 @@ Page({
   data:{
     userInfo:{},
     showAuth:true,
-    presImgUrl:"https://www.foxitsoftware.com/blog/wp-content/uploads/2016/12/Is-CCD-the-patient-data-exchange-standard-to-rule-them-all-in-healthcare.png"
+    en:true,
   },
 
   auth:function(e){
@@ -28,6 +28,19 @@ Page({
           })
         }
       }
+    });
+    var appInstance = getApp();
+    that.setData({
+      en:(appInstance.globalData.language=="en")
+    })
+  },
+
+  changeLanguage:function(){
+    var app = getApp();
+    var target = ((app.globalData.language=="en")?"zh":"en");
+    app.globalData.language= target
+    this.setData({
+      en:(app.globalData.language=="en")
     })
   }
 })

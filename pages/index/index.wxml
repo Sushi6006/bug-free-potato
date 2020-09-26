@@ -1,30 +1,31 @@
 <!--pages/authorization/authorization.wxml-->
 <view class="container">
+  <button class="languageBtn" style="width:200rpx" bindtap="changeLanguage">{{en?"切换中文":"English"}}</button>
   <block wx:if="{{showAuth}}">
-    <text class="h1">Prescriptor</text>
-    <text class="p">Manage your prescriptions and purchase medicine at home</text>
-    <button class="authBtn" open-type="getUserInfo" bindgetuserinfo="auth">WeChat Authorization</button>
+    <text class="h1">{{en?"Prescriptor":"药方管家"}}</text>
+    <text class="p">{{en?"Manage your prescriptions and purchase medicine at home":"管理你的药方，轻松订购"}}</text>
+    <button class="authBtn" open-type="getUserInfo" bindgetuserinfo="auth">{{en?"WeChat Authorization":"授权登录"}}</button>
   </block>
 
   <block wx:else>
     <view class="header">
       <image class="avatar" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
-      <text class="name">Welcome, {{userInfo.nickName}}</text>
+      <text class="name">{{en?"Welcome, ":"欢迎回来，"}} {{userInfo.nickName}}</text>
     </view>
-    <text class="title">My Prescriptions</text>
+    <text class="title">{{en?"My prescriptions":"我的药方"}}</text>
     <swiper class="prescriptions" indicator-dots circular previous-margin="10px" next-margin="10px">
       <swiper-item><navigator url="/pages/prescription/prescription"><view class="bgCard">
-        <text>prescription 1</text>
+        <text>{{en?"Prescription 1":"药方1"}}</text>
       </view></navigator></swiper-item>
       <swiper-item><navigator url="/pages/prescription/prescription"><view class="bgCard">
-        <text>prescription 2</text>
+        <text>{{en?"Prescription 2":"药方2"}}</text>
       </view></navigator></swiper-item>
       <swiper-item><navigator url="/pages/prescription/prescription"><view class="bgCard">
-        <text>prescription 3</text>
+        <text>{{en?"Prescription 3":"药方3"}}</text>
       </view></navigator></swiper-item>
     </swiper>
-    <button>Consultation Request</button>
-    <button>Order Medicine</button>
+    <button>{{en?"Consultation Request":"预约"}}</button>
+    <button>{{en?"Order Medicine":"订购药品"}}</button>
   </block>
 </view>
 
