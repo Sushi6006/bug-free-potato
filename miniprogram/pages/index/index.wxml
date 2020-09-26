@@ -1,56 +1,30 @@
 <!--index.wxml-->
 
 <scroll-view scroll-y class="DrawerPage {{modalName=='viewModal'?'show':''}}" bindscroll="onPageScroll" scroll-with-animation="true" style="background-color: {{skin?'#ffffff':'#ffffff'}};" bindscrolltolower="loadMore">
-    <cu-custom bgColor="bg-lightGrey" isBack="{{false}}" isCustom="{{false}}" isNav="{{scrollTop>120?false:true}}" isFixed="fixed">
-        <view slot="content" class="text-shadow-meows">
-            <text class="text-white text-bold">{{BlogName}}</text>
-        </view>
-    </cu-custom>
+    
     <wh-addTips text="Meow~ 点击「添加到我的小程序」" duration="2"></wh-addTips>
     <view bindtouchstart="touchStart" bindtouchend="touchEnd" class="flex justify-center align-center bg-white" style="width:100%; height:460rpx; background-image:url(http://img1.juimg.com/170727/330862-1FHH2321982.jpg); background-repeat: no-repeat; background-size: 100% 100%;">
-        <view class="grid col-1 margin-bottom text-center">
-            <view class="text-xxxl padding text-shadow-meow" role="" aria-label="">
-              
-                <text class="text-white text-bold">{{BlogName}}</text>
-            </view>
-            
-            <view class="text-xl padding text-shadow-meow text-white text-bold" role="" aria-label="">
-                <wh-typeWriter whContent="{{jinrishici}}"></wh-typeWriter>
-            </view>
-        </view>
         <view class="cu-item" style='min-height: 200rpx;'>
             <view wx:if="{{!hasUserInfo && canIUse}}" class="content grid col-1">
-                    <!--<view class="padding-sm text-sm flex justify-center">
-                        <text class="text-grey">Login for more features</text>
-                    </view>--> 
-                    <view style="margin-top: 70rpx; margin-left:-60rpx">
-                        <view class="grid col-1 margin-bottom text-center">
-                            <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'>
-                            WeChat authorization
-                            </button>
-                        </view>
+                <view style="margin-top: 70rpx; margin-left:-10rpx">
+                    <view class="grid col-1 margin-bottom text-center">
+                        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'>
+                        WeChat authorization
+                        </button>
                     </view>
                 </view>
+            </view>
                 
-                <block wx:else>
-                    
-                    <view class="content flex justify-center align-center">
-                        <view style="margin-top: -70rpx;margin-left:-100rpx">
+            <block wx:else>
+                <view style="margin-top: -70rpx">
+                    <view class="content flex justify-center align-center"> 
                         <view class="flex-sub">
                             <view class="cu-avatar xl round menu-img" style="background-image:url({{userInfo.avatarUrl}});"></view>
                         </view>
-                    <!--
-                        <view class="flex-twice grid col-1 ">
-                            <view class="text-lg margin-xs">
-                                <text class="text-black text-bold">Welcome, {{userInfo.nickName}}</text>
-                            </view>
-                        </view>
---> 
-                        </view>
                     </view>
-                </block>
-                
-            </view>
+                </view>
+            </block>
+        </view>
     </view>
     <view class="home text-shadow-meow" bindtap="showModal" data-target="viewModal">
         <view class="home-btn home-img shadow-blur"></view>
@@ -61,7 +35,7 @@
     <view style="margin-top: 30rpx;">
         <swiper bindchange="cardSwiper" class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" circular="true" autoplay="true" interval="5000" duration="500">
            <swiper-item>
-                <navigator url="../post/post?postId={{bannerPost.id}}" open-type="navigate">
+                <navigator url="/pages/prescription/prescription-detail" open-type="navigate">
                     <view class="swiper-item" style="padding: 20rpx; padding-bottom:26rpx;">
                         <view class="carousel-img radius shadow-meow bg-lightGrey bg-img" style="background-image:url(https://www.foxitsoftware.com/blog/wp-content/uploads/2016/12/Is-CCD-the-patient-data-exchange-standard-to-rule-them-all-in-healthcare.png); width:100%">
                             <view class="bg-maskCard flex-sub" style="border-radius:6rpx; height:100%; position:relative;">
@@ -81,7 +55,8 @@
                 </navigator>
             </swiper-item>
             <swiper-item>
-                <navigator url="../post/post?postId={{bannerPost.id}}" open-type="navigate">
+
+                <navigator url="/pages/prescription/prescription-detail" open-type="navigate">
                     <view class="swiper-item" style="padding: 20rpx; padding-bottom:26rpx;">
                         <view class="carousel-img radius shadow-meow bg-lightGrey bg-img" style="background-image:url(https://www.foxitsoftware.com/blog/wp-content/uploads/2016/12/Is-CCD-the-patient-data-exchange-standard-to-rule-them-all-in-healthcare.png); width:100%">
                             <view class="bg-maskCard flex-sub" style="border-radius:6rpx; height:100%; position:relative;">
@@ -101,7 +76,7 @@
                 </navigator>
             </swiper-item>
             <swiper-item>
-                <navigator url="../post/post?postId={{bannerPost.id}}" open-type="navigate">
+                <navigator url="/pages/prescription/prescription-detail" open-type="navigate">
                     <view class="swiper-item" style="padding: 20rpx; padding-bottom:26rpx;">
                         <view class="carousel-img radius shadow-meow bg-lightGrey bg-img" style="background-image:url(https://www.foxitsoftware.com/blog/wp-content/uploads/2016/12/Is-CCD-the-patient-data-exchange-standard-to-rule-them-all-in-healthcare.png); width:100%">
                             <view class="bg-maskCard flex-sub" style="border-radius:6rpx; height:100%; position:relative;">

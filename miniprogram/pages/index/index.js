@@ -12,17 +12,13 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
+
+  
+  onShow: function () {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+        hasUserInfo: true 
       })
     } else if (this.data.canIUse){
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -90,7 +86,7 @@ touchEnd: function (e) {
       if (absY > absX * 2 && tmY < 0) {
           console.log("上滑动=====")
       }
-  }
+  } 
   clearInterval(interval); // 清除setInterval
   time = 0;
 }

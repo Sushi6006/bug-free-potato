@@ -1,23 +1,69 @@
+<view wx:if="{{!hasUserInfo && canIUse}}" class="content grid col-1">
+  <view style="margin-top: 300rpx">
+    <view class="padding-sm text-sm flex justify-center">
+      <text class="text-grey">Prescriptor</text>
+    </view>
+    <view style="margin-top: 50rpx">
+      <view class="padding-sm text-sm flex justify-center">
+        <text class="text-grey">Manage your prescriptions and purchase medicine at home</text>
+      </view>
+    </view> 
+    <view style="margin-top: 70rpx">
+      <view class="grid col-1 margin-bottom text-center">
+          <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'>
+            WeChat authorization
+          </button>
+      </view>
+    </view>
+  </view> 
+</view>
+       
+<block wx:else>
+    <view class="content flex justify-center align-center">
+        <view style="margin-top: 70rpx">
+        <view class="flex-sub">
+          <view class="cu-avatar xl round menu-img" style="background-image:url({{userInfo.avatarUrl}});"></view>
+        </view>
+    
+        <view class="flex-twice grid col-1 ">
+          <view style="margin-left: 20rpx">
+            <text class="userinfo-nickname"> {{userInfo.nickName}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
 
-<view class="user-box">
-  <view class="user-info-box">
-    <view class="user-info-header-box">
-      <view class="user-name-text">Kk</view>
-      <view class="user-id-box">UserID: 954153</view>
+<view style="margin-top: 60rpx">
+  <view class="user-box">
+    <view class="user-info-box">
+      <view class="user-info-header-box">
+      <!-- <view class="user-name-text">{{userInfo.nickName}}</view>--> 
+
+        <view class="user-id-box">UserID: 954153</view>
+      </view>
+      <!-- <image class="exchange-image" src="../../images/diaozhuan@2x.png"></image> -->
+    </view>
+
+
+    <view class="prescription-info"> 
+      <view class="prescription-prefix">Number of prescriptions waiting to be processed:</view>
+      <view class="prescription-number">3</view>
+    </view>
+
+    
+
+    <view class="user-list-item" wx:for="{{fakeuserInfo}}" wx:key="*this">
+      <view class="user-item-name">{{item.infoName}}{{item.infoValue}}</view>
+      <!-- <image class="user-item-favor-image" src="../../images/shoucang@2x.png"></image> -->
     </view>
   </view>
 
-  <view class="prescription-info">
-    <view class="prescription-prefix">Number of prescriptions waiting to be processed:</view>
-    <view class="prescription-number">3</view>
-  </view>
-
-  
-  <view class="user-list-item" wx:for="{{userInfo}}" wx:key="*this">
-    <view class="user-item-name">{{item.infoName}}{{item.infoValue}}</view>
-  </view>
 </view>
+<view style="margin-top: 40rpx">
 
-<button class="btn1"> 
-  <view class="btn1-text"> Purchase History </view>
-</button>
+  <button class="btn1"> 
+    <navigator url="../history/history" class="btn1-text"> Purchase History </navigator>
+    <!-- <view class="btn1-text"> Purchase History </view> -->
+  </button>
+</view>
+</block>

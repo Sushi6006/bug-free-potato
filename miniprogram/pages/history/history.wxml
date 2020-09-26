@@ -1,0 +1,13 @@
+<view class="history-one">
+  <view class="history-one-info-box">
+    <view class="header-one-box"> DATE: 09/26/2020  TIME: 13:00 </view>
+</view>
+
+<view class="user-list-item" wx:for="{{historyInfo}}" wx:key="*this">
+    <view class="user-item-name">{{item.infoName}}{{item.infoValue}}</view>
+  </view>
+</view>
+
+<view class="list-one-amount"> Total amount: $20.99 </view>
+
+
