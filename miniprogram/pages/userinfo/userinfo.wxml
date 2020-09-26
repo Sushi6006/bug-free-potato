@@ -1,46 +1,70 @@
-<!--pages/bus/bus.wxml-->
-<!-- <view class="bus-box">
-  <view class="bus-info-box">
-    <view class="bus-info-stop-box">
-      <view class="stop-name-text">Kk</view>
-      <view class="stop-time-box">
-        <view class="stop-time-first-text">首：04:15</view>
-        <view class="stop-time-last-text">末：19:30</view>
+
+<view wx:if="{{!hasUserInfo}}" class="content grid col-1">
+  <view style="margin-top: 300rpx">
+    <view class="padding-sm text-sm flex justify-center">
+      <text class="text-grey">Prescriptor</text>
+    </view>
+    <view style="margin-top: 50rpx">
+      <view class="padding-sm text-sm flex justify-center">
+        <text class="text-grey">Manage your prescriptions and purchase medicine at home</text>
+      </view>
+    </view> 
+    <view style="margin-top: 70rpx">
+      <view class="grid col-1 margin-bottom text-center">
+          <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'>
+            WeChat authorization
+          </button>
       </view>
     </view>
-    <image class="exchange-image" src="../../images/diaozhuan@2x.png"></image>
-  </view> -->
- 
-
-  <view class="user-box">
-  <view class="user-info-box">
-    <view class="user-info-header-box">
-      <view class="user-name-text">Kk</view>
-      <view class="user-id-box">UserID: 954153</view>
-    </view>
-    <!-- <image class="exchange-image" src="../../images/diaozhuan@2x.png"></image> -->
-  </view>
-
-
-  <!-- <view class="bus-actual-info">
-    <view class="bus-actual-info-time">沪A-01302D还有10分钟到站</view>
-    <view class="bus-actual-info-stops">5站</view>
-  </view> -->
-  
-
-  <view class="prescription-info">
-    <view class="prescription-prefix">Number of prescriptions waiting to be processed:</view>
-    <view class="prescription-number">3</view>
-  </view>
-
-  
-  <view class="user-list-item" wx:for="{{userInfo}}">
-    <!-- <image class="user-item-image" src="../../images/zhou@2x.png"></image> -->
-    <view class="user-item-name">{{item.infoName}}{{item.infoValue}}</view>
-    <!-- <image class="user-item-favor-image" src="../../images/shoucang@2x.png"></image> -->
-  </view>
+  </view> 
 </view>
+       
+<block wx:else>
+    <view class="content flex justify-center align-center">
+        <view style="margin-top: 70rpx">
+        <view class="flex-sub">
+          <view class="cu-avatar xl round menu-img" style="background-image:url({{userInfo.avatarUrl}});"></view>
+        </view>
+    
+        <view class="flex-twice grid col-1 ">
+          <view style="margin-left: 20rpx">
+            <text class="userinfo-nickname"> {{userInfo.nickName}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
 
-<button class="btn1"> 
-  <view class="btn1-text"> Purchase History </view>
+<view style="margin-top: 60rpx">
+  <view class="user-box">
+    <view class="user-info-box">
+      <view class="user-info-header-box">
+      <!-- <view class="user-name-text">{{userInfo.nickName}}</view>--> 
+
+        <view class="user-id-box">UserID: 954153</view>
+      </view>
+      <!-- <image class="exchange-image" src="../../images/diaozhuan@2x.png"></image> -->
+    </view>
+
+
+    <view class="prescription-info"> 
+      <view class="prescription-prefix">Number of prescriptions waiting to be processed:</view>
+      <view class="prescription-number">3</view>
+    </view>
+
+    
+
+    <view class="user-list-item" wx:for="{{fakeuserInfo}}" wx:key="*this">
+      <view class="user-item-name">{{item.infoName}}{{item.infoValue}}</view>
+      <!-- <image class="user-item-favor-image" src="../../images/shoucang@2x.png"></image> -->
+    </view>
+  </view>
+
+</view>
+<view style="margin-top: 40rpx">
+
+  <button class="btn1"> 
+    <view class="btn1-text"> Purchase History </view>
+
   </button>
+</view>
+</block>

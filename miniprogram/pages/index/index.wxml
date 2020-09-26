@@ -33,21 +33,14 @@
                 </view>
                 
                 <block wx:else>
-                    <view class="content flex justify-center align-center">
-                        <view class="flex-sub">
-                            <view class="cu-avatar xl round menu-img" style="background-image:url({{userInfo.avatarUrl}});"></view>
-                        </view>
-                        <view class="flex-twice grid col-1 ">
-                            <view class="text-lg margin-xs">
-                                <text class="text-black text-bold">{{userInfo.nickName}}</text>
-                            </view>
-                            <view class="margin-xs bg-white">
-                                <view class="cu-tag radius">{{Role}}</view>
+                    <view style="margin-top: -70rpx; margin-left:-110rpx">
+                        <view class="content flex justify-center align-center"> 
+                            <view class="flex-sub">
+                                <view class="cu-avatar xl round menu-img" style="background-image:url({{userInfo.avatarUrl}});"></view>
                             </view>
                         </view>
                     </view>
                 </block>
-                
             </view>
     </view>
     <view class="home text-shadow-meow" bindtap="showModal" data-target="viewModal">
