@@ -1,9 +1,10 @@
 {
-  "pages": [
+  "pages": [          
     "pages/index/index",
-    "pages/userinfo/userinfo",  
-    "pages/prescription/prescription-detail",
-    "pages/history/history"
+    "pages/userinfo/userinfo",
+    "pages/orders/orders",  
+    "pages/history/history",
+    "pages/prescription/prescription-detail"
     ],
   "window": {
     "backgroundColor": "#F6F6F6",

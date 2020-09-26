@@ -41,7 +41,11 @@ Page({
   },
 
   
-  
+  goOrder: function (e) {
+    wx.navigateTo({
+      url: "/pages/orders/orders?type=" + e.currentTarget.dataset.type
+    })
+  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo

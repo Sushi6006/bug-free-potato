@@ -32,7 +32,38 @@
         </view>
       </view>
     </view>
+<view style="margin-top: 60rpx">
 
+  <view class="space"></view>
+    <navigator url="../orders/orders">
+      <view class="menu-item">
+        <view class="l"> My Orders</view>
+        <image class="next" src="/images/next.png"></image>
+      </view>
+    </navigator>
+  <view class="line"></view>
+  <view class='order-shortcut'>
+    <view class='item' bindtap='goOrder' data-type="0">
+      <view wx:if="{{count_id_no_pay !== 0}}" class='dot'>{{count_id_no_pay}}</view>
+      <image class="icon" src="/images/topay.png" background-size="cover"></image>
+      <view class='text'>Unpaid</view>
+    </view>
+    <view class='item' bindtap='goOrder' data-type="1">
+      <view wx:if="{{count_id_no_transfer !== 0}}" class='dot'>{{count_id_no_transfer}}</view>
+      <image class="icon" src="/images/fahuo.png" background-size="cover"></image>
+      <view class='text'>Confirmed</view>
+    </view>
+    <view class='item' bindtap='goOrder' data-type="2">
+      <view wx:if="{{count_id_no_confirm !== 0}}" class='dot'>{{count_id_no_confirm}}</view>
+      <image class="icon" src="/images/shouhuo.png" background-size="cover"></image>
+      <view class='text'>On its way</view>
+    </view>
+    <view class='item' bindtap='goOrder' data-type="3">
+      <image class="icon" src="/images/shouhou.png" background-size="cover"></image>
+      <view class='text'>Delivered</view>
+    </view>
+  </view>
+</view>
 <view style="margin-top: 60rpx">
   <view class="user-box">
     <view class="user-info-box">
@@ -47,7 +78,7 @@
 
     <view class="prescription-info"> 
       <view class="prescription-prefix">Number of prescriptions waiting to be processed:</view>
-      <view class="prescription-number">3</view>
+      <view class="prescription-number">6</view>
     </view>
 
     
@@ -58,12 +89,5 @@
     </view>
   </view>
 
-</view>
-<view style="margin-top: 40rpx">
-
-  <button class="btn1"> 
-    <navigator url="../history/history" class="btn1-text"> Purchase History </navigator>
-    <!-- <view class="btn1-text"> Purchase History </view> -->
-  </button>
 </view>
 </block>
