@@ -3,9 +3,33 @@
 Page({
 
 data: {
-    userInfo: [{'id': 0, 'sid': null, "infoName": "Sex:  ", "infoValue": "Male"},
-    {'id': 0, 'sid': null, "infoName": "DOA:  ", "infoValue": "2000-09-21"},
-    {'id': 0, 'sid': null, "infoName": "Address:  ", "infoValue": "xxx"}]
+    userInfo:{},
+    showAuth:true,
 },
+
+    auth:function(e){
+        this.setData({
+        userInfo:e.detail.userInfo,
+        showAuth:false
+        });
+    },
+
+  onLoad:function(){
+    var that=this;
+    wx.getSetting({
+      success(res){
+        if(res.authSetting["scope.userInfo"]){
+          wx.getUserInfo({
+            success: function(res) {
+              that.setData({
+                userInfo:res.userInfo,
+                showAuth:false
+              })
+            }
+          })
+        }
+      }
+    })
+  }
 
 })

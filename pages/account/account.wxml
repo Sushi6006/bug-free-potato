@@ -1,23 +1,63 @@
 
-<view class="user-box">
-  <view class="user-info-box">
-    <view class="user-info-header-box">
-      <view class="user-name-text">Kk</view>
-      <view class="user-id-box">UserID: 954153</view>
+<view class="container">
+  <block wx:if="{{showAuth}}">
+    <text class="h1">Prescriptor</text>
+    <text class="p">Manage your prescriptions and purchase medicine at home</text>
+    <button class="authBtn" open-type="getUserInfo" bindgetuserinfo="auth">WeChat Authorization</button>
+  </block>
+  <block wx:else>
+
+    <view class="user-box"  style="text-align:left">
+      <view class="header">
+        <image class="avatar" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+        <text class="name">Welcome, {{userInfo.nickName}}</text>
+      </view>
+
+      <view class="order-div">
+        <navigator class="myorder" url="/pages/orders/orders?nav_status=9999">
+          <text>My Orders</text>
+          <image src="/images/next.png" mode="widthFix"></image>
+        </navigator>
+        <view class="navbars">
+          <navigator class="nav-item" url="/pages/orders/orders?nav_status=0">
+            <image src="/images/topay.png" mode="widthFix"></image>
+            <text>Unpaid</text>
+            <view class="dot"></view>
+          </navigator>
+          <navigator class="nav-item" url="/pages/orders/orders?nav_status=1">
+            <image src="/images/fahuo.png" mode="widthFix"></image>
+            <text>Confirmed</text>
+          </navigator>
+          <navigator class="nav-item" url="/pages/orders/orders?nav_status=2">
+            <image src="/images/delivered.png" mode="widthFix"></image>
+            <text>OnItsWay</text>
+          </navigator>
+          <navigator class="nav-item" url="/pages/orders/orders?nav_status=3">
+            <image src="/images/shouhou.png" mode="widthFix"></image>
+            <text>Delivered</text>
+          </navigator>
+        </view>
+      </view>
+
+      <view class="prescription-info">
+        <view class="prescription-prefix">Number of prescriptions waiting to be processed:</view>
+        <view class="prescription-number">3</view>
+      </view>
+      <view class="user-list-item">
+        <view class="user-item-name">Gender: {{userInfo.gender==1?"Male":"Female"}} </view>
+      </view>
+      <view class="user-list-item">
+        <view class="user-item-name">Country: {{userInfo.country}} </view>
+      </view>
+      <view class="user-list-item">
+        <view class="user-item-name">Province: {{userInfo.province}} </view>
+      </view>
+      <view class="user-list-item">
+        <view class="user-item-name">City: {{userInfo.city}} </view>
+      </view>
+      <view class="user-list-item">
+        <view class="user-item-name">Language: {{userInfo.language=="zh_CN"?"Chinese":"English"}} </view>
+      </view>
     </view>
-  </view>
-
-  <view class="prescription-info">
-    <view class="prescription-prefix">Number of prescriptions waiting to be processed:</view>
-    <view class="prescription-number">3</view>
-  </view>
-
-  
-  <view class="user-list-item" wx:for="{{userInfo}}" wx:key="*this">
-    <view class="user-item-name">{{item.infoName}}{{item.infoValue}}</view>
-  </view>
+  </block>
 </view>
-
-<button class="btn1"> 
-  <view class="btn1-text"> Purchase History </view>
-</button>

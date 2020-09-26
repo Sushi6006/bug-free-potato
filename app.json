@@ -2,13 +2,15 @@
   "pages":[
     "pages/index/index",
     "pages/account/account",
-    "pages/prescription/prescription"
+    "pages/prescription/prescription",
+    "pages/orders/orders",
+    "pages/history/history"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "丁香医生",
+    "navigationBarTextStyle":"white"
   },
   "tabBar": {
     "color": "#6e6d6b",

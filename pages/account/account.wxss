@@ -2,7 +2,7 @@
 /* pages/bus/bus.wxss */
 
 .user-box {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.507);
   width: 750rpx;
   margin-top: 0rpx;
 }
@@ -13,7 +13,7 @@
   width: 750rpx;
   height: 90rpx;
   margin-top: 0rpx;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.219);
   border-bottom: #eee solid 1px;
 }
 
@@ -40,21 +40,6 @@
   width: 675rpx;
 }
 
-.user-info-header-box .user-id-box {
-  height: 37rpx;
-  padding-left: 21rpx;
-  padding-top: 12rpx;
-  font-size: 26rpx;
-  font-family: PingFangSC-Light;
-  color: rgb(240, 167, 9);
-}
-/* 
-.stop-time-box .stop-time-last-text {
-  width: 120rpx;
-  font-size: 22rpx;
-  font-family: PingFangSC-Light;
-  color: rgba(253, 89, 51, 1);
-} */
 
 .bus-info-box .exchange-image {
   width: 38rpx;
@@ -95,39 +80,70 @@
   align-items: center;
 }
 
-/* .user-list-item .user-item-image {
-  width: 22rpx;
-  height: 90rpx;
-  margin-left: 41rpx;
-} */
 
 .user-list-item .user-item-name {
-  width: 580rpx;
+  width: 750rpx;
   padding-left: 20rpx;
   font-size: 26rpx;
   font-family: PingFangSC-Light;
   color: rgba(138, 135, 134, 1);
 }
 
-/* .user-list-item .user-item-favor-image {
-  width: 40rpx;
-  height: 40rpx;
-} */
-
-.btn1 {
-  width: 80%;
-  margin-top: 20rpx;
-  background-color: burlywood;
-  color: white;
-  border-radius: 98rpx;
+.order-div{
+  width: 750rpx;
+  height:250rpx;
+}
+.myorder{
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  width:750rpx;
+  height:80rpx;
+  background-color: white;
+  margin: 10rpx 0rpx;
+  border-radius: 10%;
+}
+.myorder text{
+  height: 100%;
+  width:90%;
+  padding: 20rpx 0 20rpx 20rpx;
+}
+.myorder image{
+  height:100%;
+  width: 10%;
 }
 
-.btn1-text {
-  font-size: 28rpx;
-  font-family: PingFangSC-Light;
-  color: rgba(255, 106, 6, 1);
+.navbars{
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+  height:160rpx;
+  background-color: rgba(17, 124, 196, 0.233);
+}
+.navbars .nav-item{
+  position: relative;
+  height:100%;
+  width: 25%;
+  box-sizing: border-box;
+  padding: 0rpx 40rpx;
+  text-align: center;
+}
+
+.nav-item image{
+  width:100%;
+  margin-bottom: 0;
+}
+.nav-item text{
+  margin-top:0;
+  font-size: small;
+}
+
+.nav-item .dot{
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  width: 25rpx;
+  height:25rpx;
+  border-radius: 50%;
+  background: #FF4949;
+  color: #fff;
 }
