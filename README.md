@@ -1,16 +1,20 @@
-<!-- omit in toc -->
+**Codebrew X MUHI Hackathon Sept 2020**
 # bug-free-potato
-Codebrew X MUHI Hackathon Sept 2020
+This is a fully online prescription system that links patients, clinics and pharmacies together, providing an unprecedentedly convenient online prescription system for everyone.
 
 ## Features
-- 主页面 -> 2-3种登陆选项
-  - 病人
-  - 医生
-  - (药房)
-- 病人
-  - 向医生展示自己的id/用户二维码
-  - 查看历史Prescription
-  - 向医生申请重开(延期)同一个prescription
-- 医生
-  - 通过病人给出的id/二维码, 写入新的prescription
-  - 同意/拒绝病人的申请
+- Patients
+  - view their own prescriptions
+  - view history of orders
+  - order with valid prescriptions
+    - online
+    - offline -> pharmacy
+- Clinics
+  - writes prescriptions to the system
+  - accepts/declines requests of
+    - extending an unused prescription
+    - duplicate a used prescription
+- Pharmacy
+  - check validity of a prescription via QR Code
+  - finds valid prescription for patient with patient's account
+  - gives medicine if finds valid prescription
