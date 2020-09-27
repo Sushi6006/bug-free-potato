@@ -1,4 +1,4 @@
-**Codebrew X MUHI Hackathon Sept 2020**
+### Codebrew X MUHI Hackathon Sept 2020
 # bug-free-potato
 This is a fully online prescription system that links patients, clinics and pharmacies together, providing an unprecedentedly convenient online prescription system for everyone.
 
